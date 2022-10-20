@@ -50,11 +50,11 @@ function loiChao() {
     } else if (chonNguoi == 3) {
         guiLoiChao = "Mẹ";
     } else if (chonNguoi == 4) {
-        guiLoiChao = "Anh";
+        guiLoiChao = "Anh Trai";
     } else if (chonNguoi == 5) {
-        guiLoiChao = "Bố";
+        guiLoiChao = "Em Gái";
     } else {
-        guiLoiChao = "Bạn, Bạn Chưa Chọn Người Nhé !"
+        guiLoiChao = "Bạn, Bạn Chưa Chọn Người Nhé !";
     }
     document.getElementById('ketQuaLoiChao').innerHTML = guiLoiChao;
 }
@@ -83,16 +83,17 @@ function demSo() {
 
     if (demSoThuTu == 0) {
         ketQuaDemSo = '3 số chẳn';
-    } if (demSoThuTu == 1) {
-        ketQuaDemSo = '1 số lẻ 2, số chẳn';
-    } if (demSoThuTu == 2) {
+    } else if (demSoThuTu == 1) {
+        ketQuaDemSo = '1 số lẻ ,2 số chẳn';
+    } else if (demSoThuTu == 2) {
         ketQuaDemSo = '2 số lẻ, 1 số chẳn';
-    } if (demSoThuTu == 3) {
+    } else if (demSoThuTu == 3) {
         ketQuaDemSo = '3 số lẻ';
     } else {
-        alert('Vui lòng nhập dữ liệu')
+        alert('dữ liệu không hợp lệ');
     }
     document.getElementById('ketQuaDemSo').innerHTML = ketQuaDemSo;
+
 }
 
 //! bài 4
@@ -123,15 +124,15 @@ function duDoan() {
         ketQuaDuDoan1 = "tam giác vuông";
     } else if (Math.pow(canh3, 2) + Math.pow(canh2, 2) == Math.pow(canh1, 2) && canh1 > 0 && canh2 > 0 && canh3 > 0) {
         ketQuaDuDoan1 = "tam giác vuông";
-    }  else if (canh1 == canh2 && canh2 != canh3 && canh1 > 0 && canh2 > 0 && canh3 > 0) {
+    } else if (canh1 == canh2 && canh2 != canh3 && canh1 > 0 && canh2 > 0 && canh3 > 0) {
         ketQuaDuDoan1 = "tam giác cân";
     } else if (canh1 == canh3 && canh3 != canh2 && canh1 > 0 && canh2 > 0 && canh3 > 0) {
         ketQuaDuDoan1 = "tam giác cân";
     } else if (canh3 == canh2 && canh2 != canh1 && canh1 > 0 && canh2 > 0 && canh3 > 0) {
         ketQuaDuDoan1 = "tam giác cân";
-    }else if (canh1 != 0 && canh2 != 0 && canh3 != 0) {
+    } else if (canh1 != 0 && canh2 != 0 && canh3 != 0) {
         ketQuaDuDoan1 = "một loại tam giác khác";
-    }else if (canh1 == 0 || canh2 == 0 || canh3 == 0) {
+    } else if (canh1 == 0 || canh2 == 0 || canh3 == 0) {
         ketQuaDuDoan1 = "kích thước không hợp lệ";
     } else {
         console.log('một loại tam giác khác');
